@@ -9,9 +9,26 @@ function App() {
   return (
     <>
       <section className="islandPage">
+
+{/* sky animations */}
+        <div className='sky'>
+          <div className='skyPhase skyDawn'></div>
+          <div className='skyPhase skyNoon'></div>
+          <div className='skyPhase skyDusk'></div>
+          <div className='skyPhase skyMidnight'>
+            <img src={starSky} className='stars' />
+          </div>
+          <div className='orbit'>
+            <div className='sun'></div>
+            <div className='moon'></div>
+          </div>
+        </div>
+
+{/* foreground and title */}
         <div className='waves'>
-          <img src={starSky} className='stars' />
-          <h1>Ben Rehmann</h1>
+          {/* <img src={starSky} className='stars' /> */}
+          <h1 className='titleBen'>Ben Rehmann</h1>
+          <h1 className='titleStingray'>barbed_Stingray</h1>
           <img src={Island} className='island' />
           <div className='wave' id='waveOne'></div>
           <div className='wave' id='waveTwo'></div>
@@ -20,11 +37,12 @@ function App() {
         </div>
       </section>
 
-      <section className='underSea'>
-          <LoremIpsum />
+      {/* <section className='underSea'>
+          <div className='bubbles background'>
+          <div><LoremIpsum /></div>
 
-          <LoremIpsum />
-      </section>
+          </div>
+      </section> */}
     </>
   );
 }

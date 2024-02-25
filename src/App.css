@@ -5,8 +5,8 @@
 }
 
 body {
-  /* background-color: #101024; */
-
+  --animation-speed: 30s;
+  /* background-color: #251d18; */
 }
 
 .islandPage {
@@ -19,7 +19,11 @@ body {
   position: relative;
   width: 100%;
   background-color: #101024;
+
+  overflow: hidden;
 }
+
+/* Island Waves  */
 
 .islandPage .waves {
   position: relative;
@@ -98,6 +102,18 @@ body {
   mix-blend-mode: screen;
 }
 
+.island {
+  /* border: 2px solid magenta; */
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 800px;
+  /* width: 75%; */
+  bottom: 0;
+}
+
+
+/* ****************** TITLE ***************** */
 h1 {
   position: absolute;
   bottom: 80vh;
@@ -110,25 +126,229 @@ h1 {
   text-transform: uppercase;
 }
 
-.island {
-  /* border: 2px solid magenta; */
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 800px;
-  /* width: 75%; */
-  bottom: 0;
+.titleBen {
+  animation: linear titleName infinite var(--animation-speed);
 }
+.titleStingray {
+  animation: linear titleAlias infinite var(--animation-speed);
+}
+
+@keyframes titleName {
+  0% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 1;
+  }
+  35% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes titleAlias {
+  0% {
+    opacity: 0;
+  }
+  65% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
+
+
+
+
+
+
+
+/* ************** sky animation ****************** */
+
+.skyPhase {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transition: opacity 0.2s;
+}
+
+.skyDawn {
+  background: linear-gradient(
+    0deg,
+    #ff5900 0%,
+    #fed766 30%,
+    #cdedf6 100%
+    /* #fed766 0%,
+    #cdedf6 100% */
+  );
+  animation: linear dawn infinite var(--animation-speed);
+}
+.skyNoon {
+  background: linear-gradient(
+    0deg,
+    #cdedf6 0%,
+    #247ba0 100%
+  );
+  animation: linear noon infinite var(--animation-speed);
+}
+
+.skyDusk {
+  background: linear-gradient(
+    0deg,
+    #ff206e 0%,
+    #0a005e 100%
+  );
+  animation: linear dusk infinite var(--animation-speed);
+}
+
+.skyMidnight {
+  background: linear-gradient(
+    0deg,
+    #020014 0%,
+    #0a005e 100%
+  );
+  animation: linear midnight infinite var(--animation-speed);
+}
+
+/* original cycle */
+@keyframes dawn {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 1;
+  }
+}
+@keyframes noon {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+}
+@keyframes dusk {
+  0% {
+    opacity: 0;
+  }
+  35% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+}
+@keyframes midnight {
+  0% {
+    opacity: 1;
+  }
+  10% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 1;
+  }
+}
+
+/* *************** ORBIT SUN / MOON ************** */
+
+.sun {
+  position: absolute;
+  top: -40px;
+  left: -40px;
+  width: 80px;
+  height: 80px;
+  background-color: #fed766;
+  border-radius: 50%;
+  box-shadow: 0 0 14px 14px #fed76633;
+}
+
+.moon {
+  position: absolute;
+  bottom: -40px;
+  right: -40px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0 0 7px 7px #ffffff33;
+}
+
+.orbit {
+  position: relative;
+  top: 215px;
+  width: 575px;
+  height: 575px;
+  /* margin: 150px auto; */
+  transform: rotate(0deg);
+  animation: linear sunrise infinite var(--animation-speed);
+}
+
+@keyframes sunrise {
+  from {
+    transform: rotate(-45deg);
+  }
+
+  to {
+    transform: rotate(315deg);
+  }
+}
+
+@keyframes moonrise {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(180deg);
+  }
+}
+
+
+
+
+
+
 
 
 
 
 /* *************** UNDER SEA ************** */
-/* Parallax */
+/* Parallax? */
 
-.underSea {
-  /* background-color: #3586ff; */
-  background-image: linear-gradient(to top, #3586ff, #3586ff );
-  height: 2000px;
-
-}
