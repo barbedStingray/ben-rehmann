@@ -1,24 +1,31 @@
 import logo from './logo.svg';
 import './App.css';
+import starSky from './Images/stars.jpg';
+import Island from './Images/island.png';
+
+import LoremIpsum from './LoremIpsum/LoremIpsum';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <section className="islandPage">
+        <div className='waves'>
+          <img src={starSky} className='stars' />
+          <h1>Ben Rehmann</h1>
+          <img src={Island} className='island' />
+          <div className='wave' id='waveOne'></div>
+          <div className='wave' id='waveTwo'></div>
+          <div className='wave' id='waveThree'></div>
+          <div className='wave' id='waveFour'></div>
+        </div>
+      </section>
+
+      <section className='underSea'>
+          <LoremIpsum />
+
+          <LoremIpsum />
+      </section>
+    </>
   );
 }
 
