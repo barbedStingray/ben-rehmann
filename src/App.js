@@ -18,8 +18,10 @@ function App() {
           <div className='skyPhase skyMidnight'>
             <img src={starSky} className='stars' />
           </div>
-          <div className='orbit'>
+          <div className='orbitSun'>
             <div className='sun'></div>
+          </div>
+          <div className='orbitMoon'>
             <div className='moon'></div>
           </div>
         </div>
@@ -37,12 +39,9 @@ function App() {
         </div>
       </section>
 
-      {/* <section className='underSea'>
-          <div className='bubbles background'>
-          <div><LoremIpsum /></div>
-
-          </div>
-      </section> */}
+      <section className='underSea'>
+          <LoremIpsum />
+      </section>
     </>
   );
 }

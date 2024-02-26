@@ -134,49 +134,21 @@ h1 {
 }
 
 @keyframes titleName {
-  0% {
-    opacity: 0;
-  }
-  15% {
-    opacity: 0;
-  }
-  20% {
-    opacity: 1;
-  }
-  30% {
-    opacity: 1;
-  }
-  35% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
+  0% { opacity: 0; }
+  15% { opacity: 0; }
+  20% { opacity: 1; }
+  30% { opacity: 1; }
+  35% { opacity: 0; }
+  100% { opacity: 0; }
 }
 @keyframes titleAlias {
-  0% {
-    opacity: 0;
-  }
-  65% {
-    opacity: 0;
-  }
-  70% {
-    opacity: 1;
-  }
-  80% {
-    opacity: 1;
-  }
-  85% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
+  0% { opacity: 0; }
+  65% { opacity: 0; }
+  70% { opacity: 1; }
+  80% { opacity: 1; }
+  85% { opacity: 0; }
+  100% { opacity: 0; }
 }
-
-
-
-
 
 
 
@@ -194,97 +166,48 @@ h1 {
 }
 
 .skyDawn {
-  background: linear-gradient(
-    0deg,
-    #ff5900 0%,
-    #fed766 30%,
-    #cdedf6 100%
-    /* #fed766 0%,
-    #cdedf6 100% */
-  );
+  background: linear-gradient( 0deg, #ff5900 0%, #fed766 30%, #cdedf6 100% );
   animation: linear dawn infinite var(--animation-speed);
 }
 .skyNoon {
-  background: linear-gradient(
-    0deg,
-    #cdedf6 0%,
-    #247ba0 100%
-  );
+  background: linear-gradient( 0deg,#cdedf6 0%, #247ba0 100% );
   animation: linear noon infinite var(--animation-speed);
 }
-
 .skyDusk {
-  background: linear-gradient(
-    0deg,
-    #ff206e 0%,
-    #0a005e 100%
-  );
+  background: linear-gradient( 0deg,#ff206e 0%,#0a005e 100% );
   animation: linear dusk infinite var(--animation-speed);
 }
-
 .skyMidnight {
-  background: linear-gradient(
-    0deg,
-    #020014 0%,
-    #0a005e 100%
-  );
+  background: linear-gradient( 0deg,#020014 0%,#0a005e 100% );
   animation: linear midnight infinite var(--animation-speed);
 }
 
 /* original cycle */
 @keyframes dawn {
-  0% {
-    opacity: 1;
-  }
-  25% {
-    opacity: 1;
-  }
-  60% {
-    opacity: 0;
-  }
-  90% {
-    opacity: 1;
-  }
+  0% { opacity: 1; }
+  25% { opacity: 1; }
+  60% { opacity: 0; }
+  90% { opacity: 1; }
 }
 @keyframes noon {
-  0% {
-    opacity: 0;
-  }
-  30% {
-    opacity: 1;
-  }
-  75% {
-    opacity: 0;
-  }
+  0% { opacity: 0; }
+  30% { opacity: 1; }
+  75% { opacity: 0; }
 }
 @keyframes dusk {
-  0% {
-    opacity: 0;
-  }
-  35% {
-    opacity: 0;
-  }
-  60% {
-    opacity: 1;
-  }
-  80% {
-    opacity: 0;
-  }
+  0% { opacity: 0; }
+  35% { opacity: 0; }
+  60% { opacity: 1; }
+  80% { opacity: 0; }
 }
 @keyframes midnight {
-  0% {
-    opacity: 1;
-  }
-  10% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 0;
-  }
-  70% {
-    opacity: 1;
-  }
+  0% { opacity: 1; }
+  10% { opacity: 0; }
+  50% { opacity: 0; }
+  70% { opacity: 1; }
 }
+
+
 
 /* *************** ORBIT SUN / MOON ************** */
 
@@ -310,34 +233,39 @@ h1 {
   box-shadow: 0 0 7px 7px #ffffff33;
 }
 
-.orbit {
+.orbitSun {
+  /* border: 2px solid limegreen; */
   position: relative;
   top: 215px;
+  /* right: 0px; */
   width: 575px;
   height: 575px;
-  /* margin: 150px auto; */
   transform: rotate(0deg);
   animation: linear sunrise infinite var(--animation-speed);
 }
-
-@keyframes sunrise {
-  from {
-    transform: rotate(-45deg);
-  }
-
-  to {
-    transform: rotate(315deg);
-  }
+.orbitMoon {
+  /* border: 2px solid magenta; */
+  position: relative;
+  top: 215px;
+  /* right: 0px; */
+  width: 575px;
+  height: 575px;
+  margin-top: -570px;
+  transform: rotate(0deg);
+  animation: linear moonrise infinite var(--animation-speed);
 }
 
+@keyframes sunrise {
+  from { transform: rotate(-50deg); }
+  to { transform: rotate(310deg); }
+}
 @keyframes moonrise {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(180deg);
-  }
+  0% { transform: rotate(-50deg); opacity: 0; }
+  55% { opacity: 0; }
+  65% { opacity: 1; }
+  90% { opacity: 1; }
+  98% { opacity: 0; }
+  100% { transform: rotate(310deg); opacity: 0; }
 }
 
 
@@ -351,4 +279,9 @@ h1 {
 
 /* *************** UNDER SEA ************** */
 /* Parallax? */
+
+.underSea {
+  height: 1200px;
+  background-image: linear-gradient(to bottom, #3586ff, #051937 );
+}
 
