@@ -237,7 +237,6 @@ h1 {
   /* border: 2px solid limegreen; */
   position: relative;
   top: 215px;
-  /* right: 0px; */
   width: 575px;
   height: 575px;
   transform: rotate(0deg);
@@ -247,10 +246,9 @@ h1 {
   /* border: 2px solid magenta; */
   position: relative;
   top: 215px;
-  /* right: 0px; */
   width: 575px;
   height: 575px;
-  margin-top: -570px;
+  margin-top: -575px;
   transform: rotate(0deg);
   animation: linear moonrise infinite var(--animation-speed);
 }
@@ -262,8 +260,8 @@ h1 {
 @keyframes moonrise {
   0% { transform: rotate(-50deg); opacity: 0; }
   55% { opacity: 0; }
-  65% { opacity: 1; }
-  90% { opacity: 1; }
+  75% { opacity: 1; }
+  80% { opacity: 1; }
   98% { opacity: 0; }
   100% { transform: rotate(310deg); opacity: 0; }
 }

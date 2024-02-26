@@ -39,9 +39,9 @@ function App() {
         </div>
       </section>
 
-      <section className='underSea'>
+      {/* <section className='underSea'>
           <LoremIpsum />
-      </section>
+      </section> */}
     </>
   );
 }
