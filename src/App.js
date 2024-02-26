@@ -1,16 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
 import starSky from './Images/stars.jpg';
 import Island from './Images/island.png';
+import stingrayLogo from './Images/LGreyIcon.png';
 
 import LoremIpsum from './LoremIpsum/LoremIpsum';
 
 function App() {
+
+
+
+
+
   return (
     <>
       <section className="islandPage">
 
-{/* sky animations */}
+        {/* sky animations */}
         <div className='sky'>
           <div className='skyPhase skyDawn'></div>
           <div className='skyPhase skyNoon'></div>
@@ -26,11 +31,15 @@ function App() {
           </div>
         </div>
 
-{/* foreground and title */}
+        {/* foreground and title */}
         <div className='waves'>
-          {/* <img src={starSky} className='stars' /> */}
+
           <h1 className='titleBen'>Ben Rehmann</h1>
-          <h1 className='titleStingray'>barbed_Stingray</h1>
+          <div className='titleStingray logoContainer'>
+            <img src={stingrayLogo} />
+            <h2 className='alias'>barbed_Stingray</h2>
+          </div>
+
           <img src={Island} className='island' />
           <div className='wave' id='waveOne'></div>
           <div className='wave' id='waveTwo'></div>
@@ -42,6 +51,9 @@ function App() {
       {/* <section className='underSea'>
           <LoremIpsum />
       </section> */}
+
+
+
     </>
   );
 }
