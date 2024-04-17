@@ -796,4 +796,15 @@ a:hover {
 
 
 /* Media Queries for Mobile */
-
+@media (max-width: 390px) {
+  .islandPage {
+    border: 2px solid red;
+    height: 85vh;
+  }
+  
+  .island {
+    width: 100vh;
+    max-width: 80vh;
+  }
+  
+}
