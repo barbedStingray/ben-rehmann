@@ -3,8 +3,9 @@ import { useEffect, useState } from 'react';
 import starSky from './Images/stars.jpg';
 import Island from './Images/island.png';
 import stingrayLogo from './Images/LGreyIcon.png';
-import Project from './Project';
-import BubbleTitle from './BubbleTitle';
+import Project from './Components/Project';
+import BubbleTitle from './Components/BubbleTitle';
+import Bubble from './Components/Bubble';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -12,7 +13,6 @@ import WitchesTodo from './Images/projectImages/witchesTodo.png';
 import Spartacus from './Images/projectImages/coolNAN.png';
 import DuckWeather from './Images/projectImages/duckWeather.png';
 import HobbitHues from './Images/projectImages/hobbitHues.png';
-import VeryFirst from './Images/projectImages/veryFirst.png';
 import PugsNCookies from './Images/projectImages/pugsNcookies.png';
 import TravelLog from './Images/projectImages/travelLog.png';
 
@@ -27,120 +27,144 @@ function App() {
     {
       image: HobbitHues,
       URL: 'https://hobbit-hues.vercel.app/#/home',
-      desc: ['Adventurous', 'Colorful', 'Creative']
-    },
-    {
-      image: WitchesTodo,
-      URL: 'https://witches-todo.vercel.app',
-      desc: ['React', 'Axios', 'Scary']
-    },
-    {
-      image: DuckWeather,
-      URL: 'https://duck-weather.vercel.app',
-      desc: ['Weather API', 'GeoLocation', 'Ducks']
+      desc: ['Framer-Motion', 'Cloudinary', 'Passport']
     },
     {
       image: Spartacus,
       URL: 'https://spartan-strength.vercel.app',
-      desc: ['Custom Hook', 'Responsive', 'SVG']
+      desc: ['Custom Hook', 'Responsive']
+    },
+    {
+      image: DuckWeather,
+      URL: 'https://duck-weather.vercel.app',
+      desc: ['Weather API', 'GeoLocation',]
+    },
+    {
+      image: WitchesTodo,
+      URL: 'https://witches-todo.vercel.app',
+      desc: ['React', 'Axios']
     },
     {
       image: TravelLog,
       URL: 'https://travel-log-puce.vercel.app',
-      desc: ['Travel', 'Images', 'SVG']
+      desc: ['Images', 'SVG']
     },
     {
       image: PugsNCookies,
       URL: 'https://pugs-n-cookies.vercel.app',
-      desc: ['Next.js', 'File Routing', 'Crumbly']
+      desc: ['Next.js', 'File Routing']
     },
-    {
-      image: VeryFirst,
-      URL: 'https://barbedstingray.github.io',
-      desc: ['1st Project', 'Ever', 'Resume']
-    }
   ]);
 
   const [projectTitle, setProjectTitle] = useState([
     {
-      letter: 'P',
-      animation: 'float 4s ease-in-out infinite',
+      letter: 'G',
+      animation: 'floatOne 6s ease-in-out infinite',
       rotate: 'rotate(-5deg)',
-      entry: 'fade-up-left',
+      entry: 'fade-up',
+      duration: '1000',
     },
     {
-      letter: 'R',
-      animation: '',
-      rotate: 'rotate(20deg)',
-      entry: '',
+      letter: 'A',
+      animation: 'floatTwo 6s ease-in-out infinite',
+      rotate: 'rotate(18deg)',
+      entry: 'fade-up',
+      duration: '1900',
+
     },
     {
-      letter: '0',
-      animation: '',
-      rotate: 'rotate(-10deg)',
-      entry: 'fade-up-left',
+      letter: 'L',
+      animation: 'floatTwo 7s ease-in-out infinite',
+      rotate: 'rotate(-11deg)',
+      entry: 'fade-up',
+      duration: '1200',
     },
     {
-      letter: 'J',
-      animation: '',
+      letter: 'L',
+      animation: 'floatThree 6s ease-in-out infinite',
       rotate: 'rotate(11deg)',
-      entry: '',
+      entry: 'fade-up',
+      duration: '2100',
     },
     {
       letter: 'E',
-      animation: '',
-      rotate: 'rotate(-6deg)',
-      entry: 'fade-up-left',
-    },
-    {
-      letter: 'C',
-      animation: '',
-      rotate: 'rotate(4deg)',
-      entry: 'flip-up',
-    },
-    {
-      letter: 'T',
-      animation: '',
-      rotate: 'rotate(-8deg)',
-      entry: '',
-    },
-    {
-      letter: 'S',
-      animation: '',
-      rotate: 'rotate(12deg)',
-      entry: '',
-    },
-  ]);
-  const [hobbyTitle, setHobbyTitle] = useState([
-    {
-      letter: 'H',
-      animation: 'float 4s ease-in-out infinite',
-      rotate: 'rotate(-5deg)',
-      entry: 'fade-up-left',
-    },
-    {
-      letter: 'O',
-      animation: '',
-      rotate: 'rotate(20deg)',
-      entry: '',
-    },
-    {
-      letter: 'B',
-      animation: '',
+      animation: 'floatOne 8s ease-in-out infinite',
       rotate: 'rotate(-10deg)',
-      entry: 'fade-up-left',
+      entry: 'fade-up',
+      duration: '1600',
     },
     {
-      letter: 'B',
-      animation: '',
-      rotate: 'rotate(11deg)',
-      entry: '',
+      letter: 'R',
+      animation: 'floatThree 7s ease-in-out infinite',
+      rotate: 'rotate(10deg)',
+      entry: 'fade-up',
+      duration: '2700',
     },
     {
       letter: 'Y',
-      animation: '',
+      animation: 'floatOne 6.5s ease-in-out infinite',
       rotate: 'rotate(-6deg)',
-      entry: 'fade-up-left',
+      entry: 'fade-up',
+      duration: '2200',
+    },
+  ]);
+  const [aboutList, setAboutList] = useState([
+    {
+      name: 'Energy',
+      div: 'energyBubble',
+      animation: 'floatOne 6s ease-in-out infinite',
+      entry: 'fade-up',
+      rotate: 'rotate(10deg)',
+    },
+
+    {
+      name: 'Lead',
+      div: 'leaderBubble',
+      animation: 'floatTwo 6.5s ease-in-out infinite',
+      entry: 'fade-up',
+      rotate: 'rotate(-5deg)',
+    },
+    {
+      name: 'Vision',
+      div: 'visionBubble',
+      animation: 'floatThree 6s ease-in-out infinite',
+      entry: 'fade-up',
+      rotate: 'rotate(6deg)',
+    },
+    {
+      name: 'Balance',
+      div: 'balanceBubble',
+      animation: 'floatTwo 7s ease-in-out infinite',
+      entry: 'fade-up',
+      rotate: 'rotate(-20deg)',
+    },
+    {
+      name: 'Create',
+      div: 'creativeBubble',
+      animation: 'floatOne 8s ease-in-out infinite',
+      entry: 'fade-up',
+      rotate: 'rotate(16deg)',
+    },
+    {
+      name: 'Passion',
+      div: 'passionBubble',
+      animation: 'floatThree 7s ease-in-out infinite',
+      entry: 'fade-up',
+      rotate: 'rotate(-10deg)',
+    },
+    {
+      name: 'Adapt',
+      div: 'adaptBubble',
+      animation: 'floatOne 6.5s ease-in-out infinite',
+      entry: 'fade-up',
+      rotate: 'rotate(9deg)',
+    },
+    {
+      name: 'Integrity',
+      div: 'integrityBubble',
+      animation: 'floatTwo 7s ease-in-out infinite',
+      entry: 'fade-up',
+      rotate: 'rotate(7deg)',
     },
   ]);
 
@@ -183,7 +207,25 @@ function App() {
       </section>
 
 
+
+
       <section className='underSea'>
+
+        <div className='aboutDiv'>
+
+          {/* <div className='descriptors'> */}
+          {aboutList.map((bubble) => (
+            <Bubble
+              name={bubble.name}
+              div={bubble.div}
+              entry={bubble.entry}
+              animation={bubble.animation}
+              rotate={bubble.rotate}
+            />
+          ))}
+          {/* </div> */}
+        </div>
+
 
         <div className='projectTitle'>
           {projectTitle.map((letter) => (
@@ -192,6 +234,7 @@ function App() {
               animation={letter.animation}
               rotate={letter.rotate}
               entry={letter.entry}
+              duration={letter.duration}
             />
           ))}
         </div>
@@ -203,17 +246,24 @@ function App() {
           ))}
         </div>
 
-        <div className='projectTitle'>
-          {hobbyTitle.map((letter) => (
-            <BubbleTitle
-              letter={letter.letter}
-              animation={letter.animation}
-              rotate={letter.rotate}
-              entry={letter.entry}
-            />
-          ))}
 
+        <div 
+        data-aos='fade'
+        data-aos-duration='1000'
+        >
+          <div className='aboutMe' >
+            <a href='https://barbedstingray.github.io' target='_blank'>
+              <div className='bubble'>
+                <p className='marginAdjust'>ABOUT</p>
+                <p className='marginAdjust'>ME</p>
+              </div>
+            </a>
+          </div>
         </div>
+
+
+
+
 
       </section>
 

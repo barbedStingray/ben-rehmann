@@ -6,20 +6,32 @@ const Project = ({ image, URL, desc }) => {
 
     return (
         <div className='projectSquare'>
-            <div className='titlePhoto' data-aos='fade-right'>
+            <div className='titlePhoto'
+                data-aos='fade-right'
+                // data-aos-delay='800'
+                data-aos-duration='1000'
+            >
                 <img alt='project photo' src={image} className='projectImage' />
             </div>
-            <div className='buttonDesc'>
-                <div className='bubbleDiv' data-aos='fade-left'>
+            <div className='buttonDesc' >
+                <div className='bubbleDiv'
+                    data-aos='fade-left'
+                    // data-aos-delay='800'
+                    data-aos-duration='1000'
+                >
                     <a href={URL} target='_blank'>
                         <div className='bubble'>
                             <p className='marginAdjust'>View</p>
                         </div>
                     </a>
                 </div>
-                <div className='projectDescription' data-aos='fade-right'>
+                <div className='projectDescription'
+                    data-aos='fade-right'
+                    // data-aos-delay='800'
+                    data-aos-duration='1000'
+                >
                     {desc.map((item, i) => (
-                            <p>{item}</p>
+                        <p>{item}</p>
                     ))}
                 </div>
             </div>

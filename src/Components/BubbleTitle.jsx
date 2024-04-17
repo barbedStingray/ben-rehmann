@@ -1,10 +1,13 @@
 import React from 'react'
 
-const BubbleTitle = ({ letter, animation, rotate, entry }) => {
+const BubbleTitle = ({ letter, animation, rotate, entry, duration }) => {
+
+
+
     return (
         <div className='projectEntry' 
             data-aos={entry}
-            data-aos-duration="3000"
+            data-aos-duration={duration}
         >
             <div className='projectLetter'
                 style={{ animation: animation }}
@@ -12,7 +15,9 @@ const BubbleTitle = ({ letter, animation, rotate, entry }) => {
                 <div className='letterDiv'
                     style={{ transform: rotate }}
                 >
-                    <div className='bubble' >
+                    <div className='bubble' 
+                        // style={{ color: 'white' }}
+                    >
                         <p className='marginAdjust projectOveride'>{letter}</p>
                     </div>
                 </div>
