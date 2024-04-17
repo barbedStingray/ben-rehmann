@@ -346,7 +346,7 @@ h1 {
 }
 
 .orbitSun {
-  border: 2px solid limegreen;
+  /* border: 2px solid limegreen; */
   position: relative;
   top: 215px;
   width: 575px;
@@ -356,7 +356,7 @@ h1 {
 }
 
 .orbitMoon {
-  border: 2px solid magenta;
+  /* border: 2px solid magenta; */
   position: relative;
   top: 215px;
   width: 575px;
@@ -852,59 +852,75 @@ a:hover {
     margin-top: 5px;
   }
   .aboutDiv {
-    border: 2px solid green;
+    /* border: 2px solid green; */
     padding-top: 10vh;
   }
   .energyBubble {
     width: 24vw;
     height: 24vw;
     font-size: 5vw;
+    left: 50vw;
   }
   .leaderBubble {
     width: 15vw;
     height: 15vw;
     font-size: 4vw;
     top: -4vh;
+    left: 26vw;
   }
   .visionBubble {
     width: 20vw;
     height: 20vw;
     font-size: 5vw;
     top: -4vh;
-    left: 43vw;
+    left: 39vw;
   }
   .balanceBubble {
     width: 26vw;
     height: 26vw;
     font-size: 4.5vw;
     top: -7vh;
+    left: 10vw;
   } 
   .creativeBubble {
     width: 18vw;
     height: 18vw;
     top: -12vh;
     font-size: 3.75vw;
+    left: 61vw;
   }
   .passionBubble {
     width: 32vw;
     height: 32vw;
     font-size: 7vw;
     top: -15vh;
+    left: 21vw;
   }
   .adaptBubble {
     width: 26vw;
     height: 26vw;
     font-size: 6vw;
     top: -20vh;
+    left: 47vw;
   }
   .integrityBubble {
     width: 36vw;
     height: 36vw;
     font-size: 6vw;
     top: -20vh;
+    left: 30vw;
   }
 
+
+
 /* projects Title */
+
+.projectTitle {
+  /* border: 2px solid magenta; */
+  width: 90vw;
+  margin: -0vh 0vh 20vh 0vh;
+}
+
 
 
 
@@ -913,7 +929,7 @@ a:hover {
 
 .projectContainer {
   /* border: 2px solid magenta; */
-  gap: 3vh;
+  gap: 5vh;
   margin-bottom: 10vh;
 }
 .projectSquare {
@@ -951,17 +967,7 @@ a:hover {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
+/* about me bubble  */
 
   .aboutMe {
     /* border: 2px solid red; */
@@ -970,8 +976,4 @@ a:hover {
     font-size: 8vw;
     margin-bottom: 20vw;  
   }
-
-  
-
-  
 }
