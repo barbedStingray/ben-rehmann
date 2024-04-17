@@ -1,14 +1,47 @@
 import './App.css';
+import { useEffect, useState } from 'react';
 import starSky from './Images/stars.jpg';
 import Island from './Images/island.png';
 import stingrayLogo from './Images/LGreyIcon.png';
+import Project from './Project';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
-import LoremIpsum from './LoremIpsum/LoremIpsum';
+import WitchesTodo from './Images/projectImages/witchesTodo.png';
+import Spartacus from './Images/projectImages/coolNAN.png';
+import DuckWeather from './Images/projectImages/duckWeather.png';
+import HobbitHues from './Images/projectImages/hobbitHues.png';
 
 function App() {
 
+  useEffect(() => {
+    AOS.init();
+  }, []);
 
 
+  const [projectList, setProjectList] = useState([
+    {
+      image: HobbitHues,
+      URL: 'https://hobbit-hues.vercel.app/#/home',
+      desc: ['Adventurous', 'Colorful', 'Creative']
+    },
+    {
+      image: WitchesTodo,
+      URL: 'https://witches-todo.vercel.app',
+      desc: ['React', 'Axios', 'Scary']
+    },
+    {
+      image: DuckWeather,
+      URL: 'https://duck-weather.vercel.app',
+      desc: ['Weather API', 'GeoLocation', 'Ducks']
+    },
+    {
+      image: Spartacus,
+      URL: 'https://spartan-strength.vercel.app',
+      desc: ['Custom Hook', 'Responsive', 'SVG']
+
+    }
+  ]);
 
 
   return (
@@ -48,9 +81,28 @@ function App() {
         </div>
       </section>
 
-      {/* <section className='underSea'>
-          <LoremIpsum />
-      </section> */}
+
+      <section className='underSea'>
+
+        <div className='welcomeDiv' data-aos='fade-up-left' >
+          <h2>Projects!</h2>
+        </div>
+
+
+
+
+
+
+
+        <div className='projectContainer'>
+          {projectList.map((project) => (
+            <Project image={project.image} URL={project.URL} desc={project.desc} />
+          ))}
+        </div>
+
+
+      </section>
+
 
 
 

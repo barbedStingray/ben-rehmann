@@ -15,7 +15,7 @@ body {
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  height: 100vh;
+  height: 96vh;
   position: relative;
   width: 100%;
   background-color: #101024;
@@ -36,47 +36,61 @@ body {
   left: 0;
   bottom: 0;
   width: 100%;
-  height: 100px;
+  height: 8.5vh;
   background-image: url(./Images/oceanWave.png);
-  background-size: 1000px 100px;
+  background-size: 1000px 70px;
 }
 
 .islandPage .waves .wave#waveOne {
   /* border: 2px solid green; */
   opacity: 0.5;
-  /* bottom: 0; */
-  z-index: 1000;
+  z-index: 80;
   animation: oceanWaves 4s linear infinite;
+  /* original 4s */
 }
+
 .islandPage .waves .wave#waveTwo {
   /* border: 2px solid gold; */
   opacity: 0.5;
-  /* bottom: 10px; */
-  z-index: 999;
+  z-index: 60;
   animation: oceanWaves2 4s linear infinite;
+  /* original 4s */
 }
+
 .islandPage .waves .wave#waveThree {
   /* border: 2px solid gold; */
   opacity: 0.2;
-  /* bottom: 15px; */
-  z-index: 998;
-  animation: oceanWaves 2s linear infinite;
+  z-index: 40;
+  animation: oceanWaves 3s linear infinite;
+  /* original 2s */
 }
+
 .islandPage .waves .wave#waveFour {
   /* border: 2px solid gold; */
   opacity: 0.7;
-  /* bottom: 20px; */
-  z-index: 999;
+  z-index: 20;
   animation: oceanWaves2 2s linear infinite;
+  /* original 2s */
 }
 
 @keyframes oceanWaves {
-  0% { background-position-x: 1000px; }
-  100% { background-position-x: 0px; }
+  0% {
+    background-position-x: 1000px;
+  }
+
+  100% {
+    background-position-x: 0px;
+  }
 }
+
 @keyframes oceanWaves2 {
-  0% { background-position-x: 0px; }
-  100% { background-position-x: 1000px }
+  0% {
+    background-position-x: 0px;
+  }
+
+  100% {
+    background-position-x: 1000px
+  }
 }
 
 .stars {
@@ -95,12 +109,14 @@ body {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  width: 800px;
+  width: 100vh;
+  max-width: 90vw;
   bottom: 0;
 }
 
 
-/* ****************** TITLE ***************** */
+
+/* ****************** TITLEs ***************** */
 h1 {
   position: absolute;
   bottom: 80vh;
@@ -108,49 +124,89 @@ h1 {
   width: 100%;
   text-align: center;
   color: white;
-  font-size: 6em;
+  font-size: 10vw;
+  
   font-weight: 800;
   text-transform: uppercase;
 }
+
 .logoContainer {
-  height: 125px;
+  /* height: 125px; */
+  height: 20vh;
   position: absolute;
   left: 10vw;
-  bottom: 70vh;
+  bottom: 60vh;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
 }
+
 .alias {
   text-align: center;
   color: white;
-  font-size: 1.5em;
+  font-size: 4vh;
   font-weight: 800;
 }
+
 .titleBen {
   animation: linear titleName infinite var(--animation-speed);
 }
+
 .titleStingray {
   animation: linear titleAlias infinite var(--animation-speed);
 }
 
 @keyframes titleName {
-  0% { opacity: 0; }
-  15% { opacity: 0; }
-  20% { opacity: 1; }
-  30% { opacity: 1; }
-  35% { opacity: 0; }
-  100% { opacity: 0; }
-}
-@keyframes titleAlias {
-  0% { opacity: 0; }
-  58% { opacity: 0; }
-  70% { opacity: 1; }
-  85% { opacity: 1; }
-  95% { opacity: 0; }
-  100% { opacity: 0; }
+  0% {
+    opacity: 0;
+  }
+
+  15% {
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  35% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
 }
 
+@keyframes titleAlias {
+  0% {
+    opacity: 0;
+  }
+
+  58% {
+    opacity: 0;
+  }
+
+  70% {
+    opacity: 1;
+  }
+
+  85% {
+    opacity: 1;
+  }
+
+  95% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
 
 
 
@@ -167,45 +223,93 @@ h1 {
 }
 
 .skyDawn {
-  background: linear-gradient( 0deg, #ff5900 0%, #fed766 30%, #cdedf6 100% );
+  background: linear-gradient(0deg, #ff5900 0%, #fed766 30%, #cdedf6 100%);
   animation: linear dawn infinite var(--animation-speed);
 }
+
 .skyNoon {
-  background: linear-gradient( 0deg,#cdedf6 0%, #247ba0 100% );
+  /* background: linear-gradient( 0deg,#cdedf6 0%, #247ba0 100% ); */
+  background: linear-gradient(0deg, #cdedf6 0%, #3b84cd 100%);
   animation: linear noon infinite var(--animation-speed);
 }
+
 .skyDusk {
-  background: linear-gradient( 0deg,#ff206e 0%,#0a005e 100% );
+  background: linear-gradient(0deg, #ff206e 0%, #0a005e 100%);
   animation: linear dusk infinite var(--animation-speed);
 }
+
 .skyMidnight {
-  background: linear-gradient( 0deg,#020014 0%,#0a005e 100% );
+  background: linear-gradient(0deg, #020014 0%, #0a005e 100%);
   animation: linear midnight infinite var(--animation-speed);
 }
 
 /* original cycle */
 @keyframes dawn {
-  0% { opacity: 1; }
-  25% { opacity: 1; }
-  60% { opacity: 0; }
-  90% { opacity: 1; }
+  0% {
+    opacity: 1;
+  }
+
+  25% {
+    opacity: 1;
+  }
+
+  60% {
+    opacity: 0;
+  }
+
+  90% {
+    opacity: 1;
+  }
 }
+
 @keyframes noon {
-  0% { opacity: 0; }
-  30% { opacity: 1; }
-  75% { opacity: 0; }
+  0% {
+    opacity: 0;
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  75% {
+    opacity: 0;
+  }
 }
+
 @keyframes dusk {
-  0% { opacity: 0; }
-  35% { opacity: 0; }
-  60% { opacity: 1; }
-  80% { opacity: 0; }
+  0% {
+    opacity: 0;
+  }
+
+  35% {
+    opacity: 0;
+  }
+
+  60% {
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 0;
+  }
 }
+
 @keyframes midnight {
-  0% { opacity: 1; }
-  10% { opacity: 0; }
-  50% { opacity: 0; }
-  70% { opacity: 1; }
+  0% {
+    opacity: 1;
+  }
+
+  10% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  70% {
+    opacity: 1;
+  }
 }
 
 
@@ -235,7 +339,7 @@ h1 {
 }
 
 .orbitSun {
-  /* border: 2px solid limegreen; */
+  border: 2px solid limegreen;
   position: relative;
   top: 215px;
   width: 575px;
@@ -243,8 +347,9 @@ h1 {
   transform: rotate(0deg);
   animation: linear sunrise infinite var(--animation-speed);
 }
+
 .orbitMoon {
-  /* border: 2px solid magenta; */
+  border: 2px solid magenta;
   position: relative;
   top: 215px;
   width: 575px;
@@ -254,22 +359,45 @@ h1 {
   animation: linear moonrise infinite var(--animation-speed);
 }
 
+/* Media queries for sun and moon orbit size */
+
 @keyframes sunrise {
-  from { transform: rotate(-50deg); }
-  to { transform: rotate(310deg); }
+  from {
+    transform: rotate(-50deg);
+  }
+
+  to {
+    transform: rotate(310deg);
+  }
 }
+
 @keyframes moonrise {
-  0% { transform: rotate(-50deg); opacity: 0; }
-  55% { opacity: 0; }
-  65% { opacity: 1; }
-  90% { opacity: 1; }
-  98% { opacity: 0; }
-  100% { transform: rotate(310deg); opacity: 0; }
+  0% {
+    transform: rotate(-50deg);
+    opacity: 0;
+  }
+
+  55% {
+    opacity: 0;
+  }
+
+  65% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  98% {
+    opacity: 0;
+  }
+
+  100% {
+    transform: rotate(310deg);
+    opacity: 0;
+  }
 }
-
-
-
-
 
 
 
@@ -280,8 +408,169 @@ h1 {
 /* Parallax? */
 
 .underSea {
-  height: 1200px;
-  background-image: linear-gradient(to bottom, #3586ff, #051937 );
+  background-image: linear-gradient(180deg, #04fafd, #119dff, #262dec);
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+
 }
+
+.welcomeDiv {
+  border: 2px solid gold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* PROJECT LIST */
+
+
+.projectContainer {
+  border: 2px solid magenta;
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5vh;
+
+}
+
+
+.projectSquare {
+  /* border: 2px solid blue; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 30vw;
+  width: 70vw;
+}
+
+.titlePhoto {
+  border: 2px solid green;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  flex: 7;
+}
+
+.projectImage {
+  width: 75%;
+  height: auto;
+  border-radius: 20px;  
+  box-shadow: 0 0 20px darkblue;
+  border: black solid 2px;
+}
+
+.buttonDesc {
+  border: 2px solid red;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  flex: 2.5;
+}
+
+.bubbleDiv {
+  border: 2px solid gold;
+}
+
+.projectDescription {
+  border: 2px solid orange;
+  font-size: 2.5vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5vh;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(0, 255, 221);
+  transition: 0.2s;
+}
+a:hover {
+  color: rgb(0, 0, 254);
+}
+
+.bubble {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4vw;
+
+  /* Bubble CSS */
+  width: 14vw;
+  height: 14vw;
+  border-radius: 50%;
+	background-image:
+		radial-gradient(8% 8% at 22% 28%,hsl(0,0%,100%) 45%,hsla(0,0%,100%,0) 50%),
+		radial-gradient(8% 8% at 23% 27%,hsl(0,0%,100%) 45%,hsla(0,0%,100%,0) 50%),
+		radial-gradient(8% 8% at 24% 26%,hsl(0,0%,100%) 45%,hsla(0,0%,100%,0) 50%),
+		radial-gradient(8% 8% at 25% 25%,hsl(0,0%,100%) 45%,hsla(0,0%,100%,0) 50%),
+		radial-gradient(8% 8% at 26% 24%,hsl(0,0%,100%) 45%,hsla(0,0%,100%,0) 50%),
+		radial-gradient(8% 8% at 27% 23%,hsl(0,0%,100%) 45%,hsla(0,0%,100%,0) 50%),
+		radial-gradient(8% 8% at 28% 22%,hsl(0,0%,100%) 45%,hsla(0,0%,100%,0) 50%);
+    box-shadow:
+		0 -0.06em 0.1em hsl(0,90%,100%) inset,
+		0 -0.15em 0.4em hsl(0,90%,100%) inset,
+		0 0.05em 0.05em hsl(0,90%,100%) inset,
+		0.05em 0 0.1em hsl(0,90%,100%) inset,
+		-0.05em 0 0.1em hsl(0,90%,100%) inset,
+		0 0.1em 0.4em hsl(0,90%,100%) inset;
+    transform-style: preserve-3d;
+    filter: drop-shadow(0.45em 0.45em 8px hsla(0, 0%, 0%, 0.661));
+    animation: float 4s ease-in-out infinite;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.bubble:hover {
+  box-shadow:
+  0 -0.06em 0.1em hsl(175, 98%, 50%) inset,
+  0 -0.15em 0.4em hsl(175, 98%, 50%) inset,
+  0 0.05em 0.05em hsl(0,90%,100%) inset,
+  0.05em 0 0.1em hsl(175, 98%, 50%) inset,
+  -0.05em 0 0.1em hsl(175, 98%, 50%) inset,
+  0 0.1em 0.4em hsl(0,90%,100%) inset;
+}
+
+
+@keyframes float {
+	from, to {
+		transform: translate(0,3%);
+	}
+	25% {
+		transform: translate(-3%,0);
+	}
+	50% {
+		transform: translate(0,-3%);
+	}
+	75% {
+		transform: translate(3%,0);
+	}
+}
+
+
+
+
+
+
+
 
 
