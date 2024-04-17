@@ -798,10 +798,34 @@ a:hover {
 /* Media Queries for Mobile */
 @media (max-width: 390px) {
   .islandPage {
-    border: 2px solid red;
-    height: 85vh;
+    /* border: 2px solid red; */
+    height: 87vh;
+  }
+  .islandPage .waves .wave {
+    height: 7vh;
+  }
+  .sun {
+    width: 60px;
+    height: 60px;
+  }
+  .moon {
+    width: 60px;
+    height: 60px;
+  }
+  .orbitSun {
+    width: 500px;
+    height: 500px;
+  }
+  .orbitMoon {
+    width: 500px;
+    height: 500px;
+    margin-top: -500px;
   }
   
+  
+  
+
+
   .island {
     width: 100vh;
     max-width: 80vh;
