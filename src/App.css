@@ -883,10 +883,10 @@ a:hover {
     left: 10vw;
   } 
   .creativeBubble {
-    width: 18vw;
-    height: 18vw;
+    width: 23vw;
+    height: 23vw;
     top: -12vh;
-    font-size: 3.75vw;
+    font-size: 5vw;
     left: 61vw;
   }
   .passionBubble {
