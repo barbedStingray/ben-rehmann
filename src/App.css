@@ -612,7 +612,6 @@ a:hover {
   display: flex;
   flex-direction: column;
   width: 90vw;
-  color: rgb(0, 255, 221);
   font-family: water;
   padding-top: 12vh;
 }
@@ -797,6 +796,9 @@ a:hover {
 
 /* Media Queries for Mobile */
 @media (max-width: 390px) {
+
+  /* Island */
+
   .islandPage {
     /* border: 2px solid red; */
     height: 87vh;
@@ -821,33 +823,118 @@ a:hover {
     height: 500px;
     margin-top: -500px;
   }
-  
-  
   h1 {
-    border: 2px solid yellow;
+    /* border: 2px solid yellow; */
     bottom: 70vh;
     font-size: 7.5vh;
   }
   .logoContainer {
-    border: 2px solid yellow;
+    /* border: 2px solid yellow; */
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    left: 15vw;
-    bottom: 58vh;
+    left: 5vw;
+    bottom: 65vh;
   }
   .logo {
-    border: 2px solid orange;
-    width: 50vw;
-    height: 50vw;
+    /* border: 2px solid orange; */
+    width: 30vw;
+    height: 30vw;
   }
-    
-  
-
-
   .island {
     width: 100vh;
     max-width: 80vh;
   }
+
+
+
+  /* descriptors */
+
+  .aboutDiv {
+    border: 2px solid green;
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+    /* color: rgb(0, 255, 221); */
+    font-family: water;
+    padding-top: 12vh;
+  }
+      
+  .energyBubble {
+    width: 10vw;
+    height: 10vw;
+    font-size: 2vw;
+    top: 0vh;
+    left: 54vw;
+  }
+  
+  .leaderBubble {
+    width: 8vw;
+    height: 8vw;
+    font-size: 2.25vw;
+    top: -8vh;
+    left: 30vw;
+  }
+  
+  .visionBubble {
+    width: 12vw;
+    height: 12vw;
+    font-size: 3vw;
+    top: -9vh;
+    left: 43vw;
+  }
+  
+  .balanceBubble {
+    width: 14vw;
+    height: 14vw;
+    font-size: 2.75vw;
+    top: -15vh;
+    left: 14vw;
+  }
+  
+  .creativeBubble {
+    width: 12vw;
+    height: 12vw;
+    top: -23vh;
+    left: 65vw;
+    font-size: 2.75vw;
+  }
+  
+  .passionBubble {
+    width: 18vw;
+    height: 18vw;
+    font-size: 4vw;
+    top: -29vh;
+    left: 27vw;
+  }
+  
+  .adaptBubble {
+    width: 16vw;
+    height: 16vw;
+    font-size: 4vw;
+    top: -41vh;
+    left: 51vw;
+  }
+  
+  .integrityBubble {
+    width: 20vw;
+    height: 20vw;
+    font-size: 3.25vw;
+    top: -40vh;
+    left: 34vw;
+  }
+
+
+
+
+
+  .aboutMe {
+    /* border: 2px solid red; */
+    width: 25vh;
+    height: 25vh;
+    font-size: 8vw;
+    margin-bottom: 20vw;  
+  }
+
+  
+
   
 }
