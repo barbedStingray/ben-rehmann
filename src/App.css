@@ -831,8 +831,8 @@ a:hover {
   .logoContainer {
     /* border: 2px solid yellow; */
     flex-direction: column;
-    left: 5vw;
-    bottom: 65vh;
+    left: 8vw;
+    bottom: 62vh;
   }
   .logo {
     /* border: 2px solid orange; */
@@ -850,12 +850,7 @@ a:hover {
 
   .aboutDiv {
     border: 2px solid green;
-    display: flex;
-    flex-direction: column;
-    width: 90vw;
-    /* color: rgb(0, 255, 221); */
-    font-family: water;
-    padding-top: 12vh;
+    padding-top: 10vh;
   }
       
   .energyBubble {
