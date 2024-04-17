@@ -851,74 +851,57 @@ a:hover {
   .marginAdjust {
     margin-top: 5px;
   }
-  
-
   .aboutDiv {
     border: 2px solid green;
     padding-top: 10vh;
   }
-      
   .energyBubble {
-    width: 14vw;
-    height: 14vw;
-    font-size: 3vw;
-    top: 0vh;
-    left: 54vw;
+    width: 24vw;
+    height: 24vw;
+    font-size: 5vw;
   }
-  
   .leaderBubble {
-    width: 10vw;
-    height: 10vw;
-    font-size: 3vw;
+    width: 15vw;
+    height: 15vw;
+    font-size: 4vw;
     top: -4vh;
   }
-  
   .visionBubble {
-    width: 12vw;
-    height: 12vw;
-    font-size: 3vw;
+    width: 20vw;
+    height: 20vw;
+    font-size: 5vw;
     top: -4vh;
     left: 43vw;
   }
-  
   .balanceBubble {
-    width: 14vw;
-    height: 14vw;
-    font-size: 2.75vw;
+    width: 26vw;
+    height: 26vw;
+    font-size: 4.5vw;
     top: -7vh;
-    left: 14vw;
-  }
-  
+  } 
   .creativeBubble {
-    width: 12vw;
-    height: 12vw;
-    top: -12vh;
-    left: 65vw;
-    font-size: 2.75vw;
-  }
-  
-  .passionBubble {
     width: 18vw;
     height: 18vw;
-    font-size: 4vw;
+    top: -12vh;
+    font-size: 3.75vw;
+  }
+  .passionBubble {
+    width: 32vw;
+    height: 32vw;
+    font-size: 7vw;
     top: -15vh;
-    left: 27vw;
   }
-  
   .adaptBubble {
-    width: 16vw;
-    height: 16vw;
-    font-size: 4vw;
+    width: 26vw;
+    height: 26vw;
+    font-size: 6vw;
     top: -20vh;
-    left: 51vw;
   }
-  
   .integrityBubble {
-    width: 20vw;
-    height: 20vw;
-    font-size: 3.25vw;
+    width: 36vw;
+    height: 36vw;
+    font-size: 6vw;
     top: -20vh;
-    left: 34vw;
   }
 
 
