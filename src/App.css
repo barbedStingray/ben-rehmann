@@ -802,7 +802,7 @@ a:hover {
     height: 87vh;
   }
   .islandPage .waves .wave {
-    height: 7vh;
+    height: 7.25vh;
   }
   .sun {
     width: 60px;
@@ -823,6 +823,25 @@ a:hover {
   }
   
   
+  h1 {
+    border: 2px solid yellow;
+    bottom: 70vh;
+    font-size: 7.5vh;
+  }
+  .logoContainer {
+    border: 2px solid yellow;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    left: 15vw;
+    bottom: 58vh;
+  }
+  .logo {
+    border: 2px solid orange;
+    width: 50vw;
+    height: 50vw;
+  }
+    
   
 
 
