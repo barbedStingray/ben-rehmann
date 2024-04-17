@@ -4,6 +4,7 @@ import starSky from './Images/stars.jpg';
 import Island from './Images/island.png';
 import stingrayLogo from './Images/LGreyIcon.png';
 import Project from './Project';
+import BubbleTitle from './BubbleTitle';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -11,6 +12,9 @@ import WitchesTodo from './Images/projectImages/witchesTodo.png';
 import Spartacus from './Images/projectImages/coolNAN.png';
 import DuckWeather from './Images/projectImages/duckWeather.png';
 import HobbitHues from './Images/projectImages/hobbitHues.png';
+import VeryFirst from './Images/projectImages/veryFirst.png';
+import PugsNCookies from './Images/projectImages/pugsNcookies.png';
+import TravelLog from './Images/projectImages/travelLog.png';
 
 function App() {
 
@@ -39,8 +43,105 @@ function App() {
       image: Spartacus,
       URL: 'https://spartan-strength.vercel.app',
       desc: ['Custom Hook', 'Responsive', 'SVG']
-
+    },
+    {
+      image: TravelLog,
+      URL: 'https://travel-log-puce.vercel.app',
+      desc: ['Travel', 'Images', 'SVG']
+    },
+    {
+      image: PugsNCookies,
+      URL: 'https://pugs-n-cookies.vercel.app',
+      desc: ['Next.js', 'File Routing', 'Crumbly']
+    },
+    {
+      image: VeryFirst,
+      URL: 'https://barbedstingray.github.io',
+      desc: ['1st Project', 'Ever', 'Resume']
     }
+  ]);
+
+  const [projectTitle, setProjectTitle] = useState([
+    {
+      letter: 'P',
+      animation: 'float 4s ease-in-out infinite',
+      rotate: 'rotate(-5deg)',
+      entry: 'fade-up-left',
+    },
+    {
+      letter: 'R',
+      animation: '',
+      rotate: 'rotate(20deg)',
+      entry: '',
+    },
+    {
+      letter: '0',
+      animation: '',
+      rotate: 'rotate(-10deg)',
+      entry: 'fade-up-left',
+    },
+    {
+      letter: 'J',
+      animation: '',
+      rotate: 'rotate(11deg)',
+      entry: '',
+    },
+    {
+      letter: 'E',
+      animation: '',
+      rotate: 'rotate(-6deg)',
+      entry: 'fade-up-left',
+    },
+    {
+      letter: 'C',
+      animation: '',
+      rotate: 'rotate(4deg)',
+      entry: 'flip-up',
+    },
+    {
+      letter: 'T',
+      animation: '',
+      rotate: 'rotate(-8deg)',
+      entry: '',
+    },
+    {
+      letter: 'S',
+      animation: '',
+      rotate: 'rotate(12deg)',
+      entry: '',
+    },
+  ]);
+  const [hobbyTitle, setHobbyTitle] = useState([
+    {
+      letter: 'H',
+      animation: 'float 4s ease-in-out infinite',
+      rotate: 'rotate(-5deg)',
+      entry: 'fade-up-left',
+    },
+    {
+      letter: 'O',
+      animation: '',
+      rotate: 'rotate(20deg)',
+      entry: '',
+    },
+    {
+      letter: 'B',
+      animation: '',
+      rotate: 'rotate(-10deg)',
+      entry: 'fade-up-left',
+    },
+    {
+      letter: 'B',
+      animation: '',
+      rotate: 'rotate(11deg)',
+      entry: '',
+    },
+    {
+      letter: 'Y',
+      animation: '',
+      rotate: 'rotate(-6deg)',
+      entry: 'fade-up-left',
+    },
   ]);
 
 
@@ -84,14 +185,16 @@ function App() {
 
       <section className='underSea'>
 
-        <div className='welcomeDiv' data-aos='fade-up-left' >
-          <h2>Projects!</h2>
+        <div className='projectTitle'>
+          {projectTitle.map((letter) => (
+            <BubbleTitle
+              letter={letter.letter}
+              animation={letter.animation}
+              rotate={letter.rotate}
+              entry={letter.entry}
+            />
+          ))}
         </div>
-
-
-
-
-
 
 
         <div className='projectContainer'>
@@ -100,6 +203,17 @@ function App() {
           ))}
         </div>
 
+        <div className='projectTitle'>
+          {hobbyTitle.map((letter) => (
+            <BubbleTitle
+              letter={letter.letter}
+              animation={letter.animation}
+              rotate={letter.rotate}
+              entry={letter.entry}
+            />
+          ))}
+
+        </div>
 
       </section>
 

@@ -7,13 +7,13 @@ const Project = ({ image, URL, desc }) => {
     return (
         <div className='projectSquare'>
             <div className='titlePhoto' data-aos='fade-right'>
-                <img alt='witchesTodo photo' src={image} className='projectImage' />
+                <img alt='project photo' src={image} className='projectImage' />
             </div>
             <div className='buttonDesc'>
                 <div className='bubbleDiv' data-aos='fade-left'>
-                    <a href={URL}>
+                    <a href={URL} target='_blank'>
                         <div className='bubble'>
-                            <p>View</p>
+                            <p className='marginAdjust'>View</p>
                         </div>
                     </a>
                 </div>
