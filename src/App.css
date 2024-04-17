@@ -904,6 +904,61 @@ a:hover {
     top: -20vh;
   }
 
+/* projects Title */
+
+
+
+/* Projects */
+
+
+.projectContainer {
+  /* border: 2px solid magenta; */
+  gap: 3vh;
+  margin-bottom: 10vh;
+}
+.projectSquare {
+  /* border: 2px solid blue; */
+  flex-direction: column;
+  height: 74vw;
+  width: 80vw;
+  gap: 0.5vh;
+}
+.titlePhoto {
+  /* border: 2px solid green; */
+  flex: 5;
+}
+.projectImage {
+  width: 85%;
+  border-radius: 10px;
+  border: white solid 1px;
+}
+.buttonDesc {
+  /* border: 2px solid red; */
+  flex-direction: row;
+  gap: 5vh;
+}
+.bubbleDiv {
+  /* border: 2px solid gold; */
+  width: 20vw;
+  height: 20vw;
+  font-size: 5vw;
+}
+.projectDescription {
+  /* border: 2px solid orange; */
+  font-size: 5vw;
+  gap: 0.25vw;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
