@@ -643,7 +643,8 @@ a:hover {
   position: relative;
   /* border: 2px solid gold; */
   color: blue;
-}:hover {
+}
+:hover {
   color: white;
 }
 
