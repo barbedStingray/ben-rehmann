@@ -643,6 +643,8 @@ a:hover {
   position: relative;
   /* border: 2px solid gold; */
   color: blue;
+}:hover {
+  color: white;
 }
 
 .energyBubble {
