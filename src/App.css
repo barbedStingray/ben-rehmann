@@ -511,13 +511,13 @@ h1 {
   width: 75%;
   height: auto;
   border-radius: 20px;
-  box-shadow: 0 0 40px darkblue;
   border: white solid 2px;
   filter: grayscale(100%);
   transition: 0.3s;
 }
 .projectImage:hover {
   filter: grayscale(0%);
+  box-shadow: 0 0 40px darkblue;
 }
 
 .buttonDesc {
