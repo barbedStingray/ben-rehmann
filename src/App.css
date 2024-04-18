@@ -517,7 +517,7 @@ h1 {
 }
 .projectImage:hover {
   filter: grayscale(0%);
-  box-shadow: 0 0 40px darkblue;
+  box-shadow: 0 0 30px darkblue;
 }
 
 .buttonDesc {
