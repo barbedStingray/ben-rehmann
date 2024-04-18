@@ -247,9 +247,9 @@ function App() {
         </div>
 
 
-        <div 
-        data-aos='fade'
-        data-aos-duration='1000'
+        {/* <div
+          data-aos='fade'
+          data-aos-duration='1000'
         >
           <div className='aboutMe' >
             <a href='https://barbedstingray.github.io' target='_blank'>
@@ -259,7 +259,7 @@ function App() {
               </div>
             </a>
           </div>
-        </div>
+        </div> */}
 
 
 

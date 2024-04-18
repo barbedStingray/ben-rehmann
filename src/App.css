@@ -455,7 +455,7 @@ h1 {
 .projectLetter {
   /* border: 2px solid gold; */
   font-family: water;
-  color: gold;
+  color: white;
 }
 
 .letterDiv {
@@ -513,6 +513,11 @@ h1 {
   border-radius: 20px;
   box-shadow: 0 0 40px darkblue;
   border: white solid 2px;
+  filter: grayscale(100%);
+  transition: 0.3s;
+}
+.projectImage:hover {
+  filter: grayscale(0%);
 }
 
 .buttonDesc {

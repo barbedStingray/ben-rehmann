@@ -11,9 +11,14 @@ const Project = ({ image, URL, desc }) => {
                 // data-aos-delay='800'
                 data-aos-duration='1000'
             >
-                <img alt='project photo' src={image} className='projectImage' />
+                <img 
+                    alt='project photo' 
+                    src={image} 
+                    className='projectImage'
+                    // style={{ filter: "grayscale(100%)" }}
+                />
             </div>
-            <div className='buttonDesc' >
+            <div className='buttonDesc'>
                 <div className='bubbleDiv'
                     data-aos='fade-left'
                     // data-aos-delay='800'
