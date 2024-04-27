@@ -438,12 +438,12 @@ h1 {
 /* GALLERY DISPLAY TITLE */
 
 .projectTitle {
-  /* border: 2px solid magenta; */
+  border: 2px solid magenta;
   width: 85vw;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  margin: 0vh 0vh 20vh 0vh;
+  margin: 2vh 0vh 20vh 0vh;
 
 }
 
