@@ -15,6 +15,8 @@ import DuckWeather from './Images/projectImages/duckWeather.png';
 import HobbitHues from './Images/projectImages/hobbitHues.png';
 import PugsNCookies from './Images/projectImages/pugsNcookies.png';
 import TravelLog from './Images/projectImages/travelLog.png';
+import UnitConversion from './Images/projectImages/unitConversion.png';
+import HolidayParticles from './Images/projectImages/holidayParticles.png';
 
 function App() {
 
@@ -23,7 +25,7 @@ function App() {
   }, []);
 
 
-  const [projectList, setProjectList] = useState([
+  const projectList = [
     {
       image: HobbitHues,
       URL: 'https://hobbit-hues.vercel.app/#/home',
@@ -40,9 +42,19 @@ function App() {
       desc: ['Weather API', 'GeoLocation',]
     },
     {
+      image: HolidayParticles,
+      URL: 'https://holiday-particles.vercel.app',
+      desc: ['useRef', 'tsParticles',]
+    },
+    {
+      image: UnitConversion,
+      URL: 'https://flexioncodereview.vercel.app',
+      desc: ['Unit Conversion']
+    },
+    {
       image: WitchesTodo,
       URL: 'https://witches-todo.vercel.app',
-      desc: ['React', 'Axios']
+      desc: ['React', 'Axios', 'Full Stack']
     },
     {
       image: TravelLog,
@@ -54,9 +66,9 @@ function App() {
       URL: 'https://pugs-n-cookies.vercel.app',
       desc: ['Next.js', 'File Routing']
     },
-  ]);
+  ];
 
-  const [projectTitle, setProjectTitle] = useState([
+  const projectTitle = [
     {
       letter: 'G',
       animation: 'floatOne 6s ease-in-out infinite',
@@ -107,8 +119,8 @@ function App() {
       entry: 'fade-up',
       duration: '2200',
     },
-  ]);
-  const [aboutList, setAboutList] = useState([
+  ];
+  const aboutList = [
     {
       name: 'Energy',
       div: 'energyBubble',
@@ -166,7 +178,7 @@ function App() {
       entry: 'fade-up',
       rotate: 'rotate(7deg)',
     },
-  ]);
+  ];
 
 
   return (
@@ -211,9 +223,7 @@ function App() {
 
       <section className='underSea'>
 
-        <div className='aboutDiv'>
-
-          {/* <div className='descriptors'> */}
+        {/* <div className='aboutDiv'>
           {aboutList.map((bubble) => (
             <Bubble
               name={bubble.name}
@@ -223,8 +233,7 @@ function App() {
               rotate={bubble.rotate}
             />
           ))}
-          {/* </div> */}
-        </div>
+        </div> */}
 
 
         <div className='projectTitle'>
@@ -245,25 +254,6 @@ function App() {
             <Project image={project.image} URL={project.URL} desc={project.desc} />
           ))}
         </div>
-
-
-        {/* <div
-          data-aos='fade'
-          data-aos-duration='1000'
-        >
-          <div className='aboutMe' >
-            <a href='https://barbedstingray.github.io' target='_blank'>
-              <div className='bubble'>
-                <p className='marginAdjust'>ABOUT</p>
-                <p className='marginAdjust'>ME</p>
-              </div>
-            </a>
-          </div>
-        </div> */}
-
-
-
-
 
       </section>
 
