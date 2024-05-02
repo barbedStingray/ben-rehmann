@@ -29,12 +29,12 @@ function App() {
     {
       image: HobbitHues,
       URL: 'https://hobbit-hues.vercel.app/#/home',
-      desc: ['Framer-Motion', 'Cloudinary', 'Passport']
+      desc: ['Framer-Motion', 'Cloudinary', 'Full Stack']
     },
     {
       image: Spartacus,
       URL: 'https://spartan-strength.vercel.app',
-      desc: ['Custom Hook', 'Responsive']
+      desc: ['Custom Hook', 'Responsive', 'Full Stack']
     },
     {
       image: DuckWeather,
