@@ -38,7 +38,7 @@ body {
 }
 
 .islandPage .waves .wave {
-  border: 2px solid blue;
+  /* border: 2px solid blue; */
   position: absolute;
   left: 0;
   bottom: 0;
@@ -192,7 +192,7 @@ h1 {
   height: 20vh;
   position: absolute;
   left: 10vw;
-  bottom: 60vh;
+  bottom: 65vh;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -500,10 +500,9 @@ h1 {
 
 }
 
-.projectEntry {
-  /* border: 2px solid black; */
+/* .projectEntry {
 
-}
+} */
 
 .projectLetter {
   /* border: 2px solid gold; */
