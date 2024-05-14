@@ -1,16 +1,21 @@
 import './App.css';
 import { useEffect, useState } from 'react';
 import starSky from './Images/stars.jpg';
-import Island from './Images/island.png';
-import PirateShip from './Images/pirateShip.png';
-import ColumbusShip from './Images/columbusShip.png';
-import TallShip from './Images/tallShip.png';
 import stingrayLogo from './Images/LGreyIcon.png';
 import Project from './Components/Project';
 import BubbleTitle from './Components/BubbleTitle';
 import Bubble from './Components/Bubble';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+
+// Displays
+import Island from './Images/island.png';
+import PirateShip from './Images/pirateShip.png';
+import ColumbusShip from './Images/columbusShip.png';
+import TallShip from './Images/tallShip.png';
+import VikingShip from './Images/vikingShip.png';
+import JunkShip from './Images/junkShip.png';
+
 
 import WitchesTodo from './Images/projectImages/witchesTodo.png';
 import Spartacus from './Images/projectImages/coolNAN.png';
@@ -26,6 +31,36 @@ function App() {
   useEffect(() => {
     AOS.init();
   }, []);
+
+  // generate ships/island
+  const shipNumber = Math.floor(Math.random() * 6) + 1;
+  // console.log('shipNumber', shipNumber);
+
+  function generateShip() {
+    switch (shipNumber) {
+      case 1:
+        // console.log('ship one');
+        return <img src={TallShip} className='ship' />
+      case 2:
+        // console.log('ship two');
+        return <img src={ColumbusShip} className='ship' />
+      case 3:
+        // console.log('ship three');
+        return <img src={PirateShip} className='ship' />
+      case 4:
+        // console.log('ship four');
+        return <img src={VikingShip} className='ship' />
+      case 5:
+        // console.log('ship five');
+        return <img src={JunkShip} className='ship' />
+      case 6:
+        // console.log('island');
+        return <img src={Island} className='island' />
+      default:
+        // console.log('Ghost Ship');
+        return;
+    }
+  }
 
 
   const projectList = [
@@ -213,9 +248,15 @@ function App() {
             <h2 className='alias'>barbed_Stingray</h2>
           </div>
 
-          <img src={ColumbusShip} className='pirateShip' />
-          {/* <img src={TallShip} className='pirateShip' /> */}
-          {/* <img src={PirateShip} className='pirateShip' /> */}
+          <div className='shipWrapper'>
+            {generateShip()}
+            {/* <img src={TallShip} className='ship' /> */}
+            {/* <img src={ColumbusShip} className='ship' /> */}
+            {/* <img src={PirateShip} className='ship' /> */}
+            {/* <img src={VikingShip} className='ship' /> */}
+            {/* <img src={JunkShip} className='ship' /> */}
+            {/* <img src={Island} className='island' /> */}
+          </div>
           {/* <img src={Island} className='island' /> */}
           <div className='wave' id='waveOne'></div>
           <div className='wave' id='waveTwo'></div>
@@ -243,8 +284,9 @@ function App() {
 
 
         <div className='projectTitle'>
-          {projectTitle.map((letter) => (
+          {projectTitle.map((letter, i) => (
             <BubbleTitle
+              key={i}
               letter={letter.letter}
               animation={letter.animation}
               rotate={letter.rotate}
@@ -256,14 +298,12 @@ function App() {
 
 
         <div className='projectContainer'>
-          {projectList.map((project) => (
-            <Project image={project.image} URL={project.URL} desc={project.desc} />
+          {projectList.map((project, i) => (
+            <Project key={i} image={project.image} URL={project.URL} desc={project.desc} />
           ))}
         </div>
 
       </section>
-
-
 
 
     </>

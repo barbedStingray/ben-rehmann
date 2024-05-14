@@ -2,7 +2,7 @@ import React from 'react'
 
 const Project = ({ image, URL, desc }) => {
 
-    console.log('desc', desc[0]);
+    // console.log('desc', desc[0]);
 
     return (
         <div className='projectSquare'>
@@ -36,7 +36,7 @@ const Project = ({ image, URL, desc }) => {
                     data-aos-duration='1000'
                 >
                     {desc.map((item, i) => (
-                        <p>{item}</p>
+                        <p key={i}>{item}</p>
                     ))}
                 </div>
             </div>
