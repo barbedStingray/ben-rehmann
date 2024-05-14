@@ -190,6 +190,7 @@ h1 {
   /* height: 125px; */
   z-index: 5;
   height: 20vh;
+  width: 50vw;
   position: absolute;
   left: 10vw;
   bottom: 65vh;
