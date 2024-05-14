@@ -899,8 +899,8 @@ a:hover {
   .logoContainer {
     /* border: 2px solid yellow; */
     flex-direction: column;
-    left: 8vw;
-    bottom: 62vh;
+    left: 10vw;
+    bottom: 60vh;
   }
 
   .logo {
