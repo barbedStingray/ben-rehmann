@@ -243,7 +243,7 @@ function App() {
         <div className='waves'>
 
           <h1 className='titleBen'>Ben Rehmann</h1>
-          <div className='titleStingray logoContainer'>
+          <div className='logoContainer'>
             <img className='logo' src={stingrayLogo} />
             <h2 className='alias'>barbed_Stingray</h2>
           </div>
