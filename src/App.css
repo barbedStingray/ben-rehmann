@@ -112,7 +112,7 @@ body {
 }
 
 .island {
-  /* border: 2px solid magenta; */
+  border: 2px solid magenta;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -120,11 +120,22 @@ body {
   max-width: 90vw;
   bottom: 0;
 }
+.pirateShip {
+  border: 2px solid magenta;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80vh;
+  max-width: 90vw;
+  bottom: -2vh;
+}
 
 
 
 /* ****************** TITLEs ***************** */
 h1 {
+  /* border: 2px solid gold; */
+  z-index: 5;
   position: absolute;
   bottom: 80vh;
   transform: translateY(50%);
@@ -139,6 +150,7 @@ h1 {
 
 .logoContainer {
   /* height: 125px; */
+  z-index: 5;
   height: 20vh;
   position: absolute;
   left: 10vw;

@@ -2,6 +2,9 @@ import './App.css';
 import { useEffect, useState } from 'react';
 import starSky from './Images/stars.jpg';
 import Island from './Images/island.png';
+import PirateShip from './Images/pirateShip.png';
+import ColumbusShip from './Images/columbusShip.png';
+import TallShip from './Images/tallShip.png';
 import stingrayLogo from './Images/LGreyIcon.png';
 import Project from './Components/Project';
 import BubbleTitle from './Components/BubbleTitle';
@@ -210,7 +213,10 @@ function App() {
             <h2 className='alias'>barbed_Stingray</h2>
           </div>
 
-          <img src={Island} className='island' />
+          <img src={ColumbusShip} className='pirateShip' />
+          {/* <img src={TallShip} className='pirateShip' /> */}
+          {/* <img src={PirateShip} className='pirateShip' /> */}
+          {/* <img src={Island} className='island' /> */}
           <div className='wave' id='waveOne'></div>
           <div className='wave' id='waveTwo'></div>
           <div className='wave' id='waveThree'></div>
