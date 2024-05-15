@@ -35,16 +35,22 @@ function App() {
     AOS.init();
   }, []);
 
+  function generateBackgroundNumber() {
+    return Math.floor(Math.random() * 7) + 1;
+  }
   // generate ships/island
-  const [shipNumber, setShipNumber] = useState(Math.floor(Math.random() * 7) + 1);
+  const [shipNumber, setShipNumber] = useState(generateBackgroundNumber());
   // console.log('shipNumber', shipNumber);
 
   function changeBackground() {
-    console.log('changing background');
-    setShipNumber(Math.floor(Math.random() * 7) + 1);
-    console.log('shipNumber', shipNumber);
-    generateShip(shipNumber);
-    return;
+    // console.log('changing background');
+    let newNumber;
+    do {
+      newNumber = generateBackgroundNumber();
+      // console.log('newNumber', newNumber);
+    } while (newNumber === shipNumber);
+
+    setShipNumber(newNumber);
   }
 
   function generateShip(shipNumber) {
