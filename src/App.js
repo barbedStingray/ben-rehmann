@@ -10,11 +10,14 @@ import 'aos/dist/aos.css';
 
 // Displays
 import Island from './Images/island.png';
+import VolcanoIsland from './Images/volcanoIsland.png';
+import CrabIsland from './Images/crabIsland.png';
+import LifeguardIsland from './Images/lifeguardIsland.png';
 import PirateShip from './Images/pirateShip.png';
 import ColumbusShip from './Images/columbusShip.png';
 import TallShip from './Images/tallShip.png';
 import VikingShip from './Images/vikingShip.png';
-import JunkShip from './Images/junkShip.png';
+import PolyShip from './Images/polyShip.png';
 
 
 import WitchesTodo from './Images/projectImages/witchesTodo.png';
@@ -33,29 +36,40 @@ function App() {
   }, []);
 
   // generate ships/island
-  const shipNumber = Math.floor(Math.random() * 6) + 1;
+  const [shipNumber, setShipNumber] = useState(Math.floor(Math.random() * 7) + 1);
   // console.log('shipNumber', shipNumber);
 
-  function generateShip() {
+  function changeBackground() {
+    console.log('changing background');
+    setShipNumber(Math.floor(Math.random() * 7) + 1);
+    console.log('shipNumber', shipNumber);
+    generateShip(shipNumber);
+    return;
+  }
+
+  function generateShip(shipNumber) {
     switch (shipNumber) {
       case 1:
         // console.log('ship one');
-        return <img src={TallShip} className='ship' />
+        return <img src={ColumbusShip} className='ship' />
       case 2:
         // console.log('ship two');
-        return <img src={ColumbusShip} className='ship' />
+        return <img src={PirateShip} className='ship' />
       case 3:
         // console.log('ship three');
-        return <img src={PirateShip} className='ship' />
+        return <img src={VikingShip} className='ship' />
       case 4:
         // console.log('ship four');
-        return <img src={VikingShip} className='ship' />
+        return <img src={PolyShip} className='ship' />
       case 5:
-        // console.log('ship five');
-        return <img src={JunkShip} className='ship' />
-      case 6:
-        // console.log('island');
+        // console.log('island five');
         return <img src={Island} className='island' />
+      case 6:
+        // console.log('island six');
+        return <img src={VolcanoIsland} className='island' />
+      case 7:
+        // console.log('island six');
+        return <img src={CrabIsland} className='island' />
       default:
         // console.log('Ghost Ship');
         return;
@@ -244,18 +258,27 @@ function App() {
 
           <h1 className='titleBen'>Ben Rehmann</h1>
           <div className='logoContainer'>
-            <img className='logo' src={stingrayLogo} />
-            <h2 className='alias'>barbed_Stingray</h2>
+            <img onClick={changeBackground} className='logo' src={stingrayLogo} />
+            <div>
+              <h2 className='alias'>From Stingrays</h2>
+              <h2 className='alias'>To Software</h2>
+              {/* <h2 className='alias'>barbed_Stingray</h2> */}
+            </div>
           </div>
 
           <div className='shipWrapper'>
-            {generateShip()}
-            {/* <img src={TallShip} className='ship' /> */}
+            {generateShip(shipNumber)}
             {/* <img src={ColumbusShip} className='ship' /> */}
             {/* <img src={PirateShip} className='ship' /> */}
             {/* <img src={VikingShip} className='ship' /> */}
-            {/* <img src={JunkShip} className='ship' /> */}
+            {/* <img src={PolyShip} className='ship' /> */}
             {/* <img src={Island} className='island' /> */}
+            {/* <img src={VolcanoIsland} className='island' /> */}
+            {/* <img src={CrabIsland} className='island' /> */}
+
+            {/* not in use */}
+            {/* <img src={LifeguardIsland} className='island' /> */}
+            {/* <img src={TallShip} className='ship' /> */}
           </div>
           {/* <img src={Island} className='island' /> */}
           <div className='wave' id='waveOne'></div>

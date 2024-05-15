@@ -17,7 +17,6 @@ body {
 }
 
 .islandPage {
-  /* border: 2px solid red; */
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -200,7 +199,13 @@ h1 {
   flex-direction: row;
   justify-content: flex-start;
   animation: linear titleAlias infinite var(--animation-speed);
-
+}
+.logo {
+  cursor: pointer;
+  transition: 0.3s;
+}
+.logo:hover {
+  transform: scale(1.1) rotate(5deg);
 }
 
 .alias {
